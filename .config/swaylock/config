@@ -1,0 +1,12 @@
+ignore-empty-password
+clock
+timestr=%R
+datestr=%a, %e of %B
+image=~/nextcloud/wallpapers/hyprland/wallpaper.jpg
+fade-in=1
+effect-blur=5x2
+indicator
+indicator-radius=200
+indicator-thickness=20
+indicator-caps-lock
+

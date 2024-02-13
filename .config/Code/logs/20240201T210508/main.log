@@ -1,0 +1,3 @@
+2024-02-01 21:05:09.036 [info] update#setState idle
+2024-02-01 21:05:11.770 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 26236]: crashed with code 133 and reason 'crashed'
+2024-02-01 21:05:19.491 [info] Extension host with pid 26197 exited with code: 0, signal: unknown.
