@@ -24,6 +24,7 @@ alias vim="nvim"
 alias reload="source ~/.zshrc"
 alias shutdown="shutdown -h now"
 alias pdf="~/.scripts/pdf-viewer/pdf"
+alias lgit="lazygit"
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/home/nodel/.local/share/coursier/bin"
