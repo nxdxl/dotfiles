@@ -1,2 +1,6 @@
 #!/bin/bash
 swaybg -i ~/nextcloud/wallpapers/hyprland/wallpaper.jpg &
+# swaybg -i ~/nextcloud/wallpapers/fantasy/wp9201356.jpg &
+# swaybg -i ~/nextcloud/wallpapers/fantasy/wp8062746.jpg &
+# swaybg -i ~/nextcloud/wallpapers/fantasy/wp10352881.jpg &
+# swaybg -i ~/nextcloud/wallpapers/fantasy/wp11340073.jpg &

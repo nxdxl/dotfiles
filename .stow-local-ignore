@@ -22,3 +22,5 @@ _darcs
 ^/COPYING
 
 Nextcloud
+.config/dconf/user
+.config/pavucontrol.ini

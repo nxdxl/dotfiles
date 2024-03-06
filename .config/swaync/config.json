@@ -1,6 +1,6 @@
 {
   	"$schema": "/etc/xdg/swaync/configSchema.json",
-  	"positionX": "center",
+  	"positionX": "right",
   	"positionY": "top",
   	"layer": "overlay",
   	"control-center-layer": "top",
@@ -19,8 +19,8 @@
     "timeout-low": 3,
     "timeout-critical": 0,
     "fit-to-screen": false,
-    "control-center-width": 350,
-    "control-center-height": 720,
+    "control-center-width": 550,
+    "control-center-height": 1148,
     "notification-window-width": 400,
     "keyboard-shortcuts": true,
     "image-visibility": "when available",
@@ -33,7 +33,6 @@
         "buttons-grid",
 		"mpris",
     	"volume",
-   	 	"backlight",
         "title",
         "notifications"
     ],
@@ -55,10 +54,7 @@
             "image-radius": 0
         },
         "volume": {
-            "label": "🔉"
-        },
-        "backlight": {
-            "label": "🔅"
+            "label": "󰕾"
         },
         "buttons-grid": {
             "actions": [
@@ -89,10 +85,6 @@
                 {
                     "label": "󰍬",
                     "command": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-                },
-                {
-                    "label": "󰂯",
-                    "command": "blueberry"
                 }
             ]
         }
