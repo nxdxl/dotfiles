@@ -6,19 +6,22 @@
         "newline": true,
         "segments": [
           {
-            "type": "shell",
-            "style": "plain",
-            "foreground": "#cba6f7",
+            "foreground": "#74c7ec",
             "properties": {
-              "mapped_shell_names": {
-                "pwsh": "Shell",
-                "powershell": "Shell",
-                "cmd": "Cmd",
-                "bash": "Bash",
-				"zsh": "zsh"
-              }
+              "style": "full"
             },
-            "template": "┌\ue795 {{ .Name }}"
+            "style": "plain",
+            "template": "┌",
+            "type": "path"
+          },
+          {
+            "foreground": "#74c7ec",
+            "properties": {
+              "style": "full"
+            },
+            "style": "plain",
+            "template": "\ue5ff {{ .Path }}",
+            "type": "path"
           },
           {
             "foreground": "#cba6f7",
@@ -65,31 +68,6 @@
             "style": "diamond",
             "template": " {{ .FormattedMs }} ",
             "type": "executiontime"
-          }
-        ],
-        "type": "prompt"
-      },
-      {
-        "alignment": "left",
-        "newline": true,
-        "segments": [
-          {
-            "foreground": "#74c7ec",
-            "properties": {
-              "style": "full"
-            },
-            "style": "plain",
-            "template": "├",
-            "type": "path"
-          },
-          {
-            "foreground": "#74c7ec",
-            "properties": {
-              "style": "full"
-            },
-            "style": "plain",
-            "template": "\ue5ff {{ .Path }}",
-            "type": "path"
           }
         ],
         "type": "prompt"
