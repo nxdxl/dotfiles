@@ -12,6 +12,7 @@ window#waybar {
   /* background-color: @base; */
   background-color: rgba(30, 30, 46, 0.85);
   border-radius: 20px;
+  border: 1px solid @mauve;
 }
 
 /* ------ Set a Uniform Border Radius ------ */
