@@ -1,0 +1,47 @@
+/*
+ *
+ *
+ * Teatime colorpalatte by atrnh
+ * https://github.com/atrnh/atrnh.github.io/blob/main/terminal-themes/teatime.md
+ *
+ *
+ */
+
+@define-color fg			#1b1b2e;
+@define-color bg			#fff6f6;
+@define-color black			#c5e1e3;
+@define-color light_black	#889499;
+@define-color red			#f3c4c4;
+@define-color light_red		#cd6868;
+@define-color green			#93ba84;
+@define-color light_green	#48c983;
+@define-color yellow		#cecce2;
+@define-color light_yellow	#707a9a;
+@define-color blue			#bfa4cd;
+@define-color light_blue	#a556ad;
+@define-color magenta		#f3adcd;
+@define-color light_magenta	#c2649f;
+@define-color cyan			#87e0dc;
+@define-color light_cyan	#4ba89d;
+@define-color white			#8ba5b3;
+@define-color light_white	#1f204a;
+
+@define-color bg00 rgba(255, 246, 246, 0.0);
+@define-color bg01 rgba(255, 246, 246, 0.1);
+@define-color bg02 rgba(255, 246, 246, 0.2);
+@define-color bg03 rgba(255, 246, 246, 0.3);
+@define-color bg04 rgba(255, 246, 246, 0.4);
+@define-color bg05 rgba(255, 246, 246, 0.5);
+@define-color bg06 rgba(255, 246, 246, 0.6);
+@define-color bg07 rgba(255, 246, 246, 0.7);
+@define-color bg08 rgba(255, 246, 246, 0.8);
+@define-color bg09 rgba(255, 246, 246, 0.9);
+@define-color bg095 rgba(255, 246, 246, 0.95);
+
+@define-color text	@fg;
+@define-color pink	@light_magenta;
+@define-color sky	@light_cyan;
+
+@define-color base		@bg;
+@define-color accent1	@pink;
+@define-color accent2	@sky;
