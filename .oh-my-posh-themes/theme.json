@@ -7,20 +7,16 @@
         "segments": [
           {
             "foreground": "#74c7ec",
-            "properties": {
-              "style": "full"
-            },
-            "style": "plain",
-            "template": "┌",
-            "type": "path"
+            "template": "┌[{{ .UserName }} on {{ .HostName }}]",
+            "type": "session"
           },
           {
-            "foreground": "#74c7ec",
+            "foreground": "#f5c2e7",
             "properties": {
               "style": "full"
             },
             "style": "plain",
-            "template": "\ue5ff {{ .Path }}",
+            "template": " \ue5ff {{ .Path }}",
             "type": "path"
           },
           {
