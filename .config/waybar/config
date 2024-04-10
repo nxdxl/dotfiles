@@ -2,10 +2,10 @@
   "layer": "top",
   "position": "",
   "spacing": 10,
-  "margin-top": 4,
+  "margin-top": 15,
   "margin-bottom": 0,
-  "margin-left": 4,
-  "margin-right": 4,
+  "margin-left": 15,
+  "margin-right": 15,
 
   "modules-left": [
     "battery",
@@ -32,6 +32,10 @@
     "format": "   {usage}%",
     "max-length": 10,
     "tooltip": false
+  },
+
+  "clock": {
+	"format": "{:%a, %d. %b  %H:%M}"
   },
 
   "memory": {
@@ -73,7 +77,7 @@
       "default": ["  ", "  ", "  "],
     },
     "tooltip": false,
-    "on-click": "export GTK_THEME='Catppuccin-Mocha-Standard-Mauve-Dark' && pavucontrol",
+    "on-click": "pavucontrol",
   },
 
   "backlight": {
@@ -91,6 +95,7 @@
     "tooltip-format-wifi": "{essid} ({signalStrength}%)",
     "tooltip-format-ethernet": "{ifname} ",
     "tooltip-format-disconnected": "Disconnected",
+	"on-click": "nm-connection-editor"
   },
 
   "bluetooth": {
