@@ -79,7 +79,7 @@
             "type": "root"
           },
           {
-            "foreground": "#EA76CB",
+            "foreground": "#74c7ec",
             "style": "plain",
             "template": "└\u276f",
             "type": "text"
