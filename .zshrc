@@ -31,5 +31,6 @@ alias audio-visualizer="cava"
 export PATH="$HOME/.local/bin:$PATH:/home/nodel/.local/share/coursier/bin:/opt/eww/target/release"
 export HYPRSHOT_DIR="/home/nodel/nextcloud/screenshots"
 
+eval "$(oh-my-posh init zsh --config ~/dotfiles/.oh-my-posh-themes/theme.json)"
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(oh-my-posh init zsh --config ~/.oh-my-posh-themes/theme.json)"
+

@@ -6,21 +6,17 @@
         "newline": true,
         "segments": [
           {
-            "foreground": "#c2649f",
-            "properties": {
-              "style": "full"
-            },
-            "style": "plain",
-            "template": "┌",
-            "type": "path"
+            "foreground": "#74c7ec",
+            "template": "┌[{{ .UserName }} on {{ .HostName }}]",
+            "type": "session"
           },
           {
-            "foreground": "#c2649f",
+            "foreground": "#f5c2e7",
             "properties": {
               "style": "full"
             },
             "style": "plain",
-            "template": "\ue5ff {{ .Path }}",
+            "template": " \ue5ff {{ .Path }}",
             "type": "path"
           },
           {
@@ -83,7 +79,7 @@
             "type": "root"
           },
           {
-            "foreground": "#EA76CB",
+            "foreground": "#74c7ec",
             "style": "plain",
             "template": "└\u276f",
             "type": "text"
