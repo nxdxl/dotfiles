@@ -27,6 +27,7 @@ alias open="~/.scripts/open/open"
 alias lit="lazygit"
 alias imopen="loupe"
 alias audio-visualizer="cava"
+alias sync="onedrive --synchronize"
 
 export PATH="$HOME/.local/bin:$PATH:/home/nodel/.local/share/coursier/bin:/opt/eww/target/release"
 export HYPRSHOT_DIR="/home/nodel/nextcloud/screenshots"
