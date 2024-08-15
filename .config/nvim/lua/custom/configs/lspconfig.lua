@@ -4,7 +4,7 @@ local util = require "lspconfig/util"
 local lspconfig = require("lspconfig")
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "clangd", "pylsp", "jdtls", "metals", "marksman" }
+local servers = { "clangd", "pyright", "jdtls", "marksman", "textlsp" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -12,6 +12,13 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+lspconfig["metals"].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+	filetypes = {"scala", "sbt"},
+	root_dir = util.root_pattern("build.sbt"),
+}
 
 
 -- local on_attach = function(client)
@@ -43,6 +50,9 @@ lspconfig.rust_analyzer.setup({
         }
     }
 })
+
+
+
 
 -- 
 -- lspconfig.pyright.setup { blabla}

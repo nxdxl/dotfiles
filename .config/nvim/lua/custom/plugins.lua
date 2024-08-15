@@ -96,6 +96,29 @@ local plugins = {
 	-- 	filetypes = {"yuck"},
 	-- }
   },
+
+  {
+    "nvim-lua/plenary.nvim",
+  },
+
+-- {
+--     "scalameta/nvim-metals",
+--     ft = { "scala", "sbt" },
+--     dependencies = {
+--       "nvim-lua/plenary.nvim",
+--     },
+--     -- stylua: ignore
+--     init = function()
+--       local metals_config = require("custom.configs.scala.metals").config()
+--       vim.api.nvim_create_autocmd("FileType", {
+--         pattern = { "scala", "sbt" },
+--         callback = function()
+--           require("metals").initialize_or_attach(metals_config)
+--         end,
+--         group = vim.api.nvim_create_augroup("nvim-metals", { clear = true }),
+--       })
+--     end,
+--   },
  --  {
 	-- "catppuccin/nvim",
 	-- name = "catppuccin",
