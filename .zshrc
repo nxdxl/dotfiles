@@ -30,7 +30,7 @@ alias audio-visualizer="cava"
 alias sync="onedrive --synchronize"
 
 export PATH="$HOME/.local/bin:$PATH:/home/nodel/.local/share/coursier/bin:/opt/eww/target/release"
-export HYPRSHOT_DIR="/home/nodel/nextcloud/screenshots"
+export HYPRSHOT_DIR="/home/nodel/OneDrive/screenshots/"
 
 eval "$(oh-my-posh init zsh --config ~/dotfiles/.oh-my-posh-themes/theme.json)"
 eval "$(zoxide init --cmd cd zsh)"
