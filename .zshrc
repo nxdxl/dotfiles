@@ -1,37 +1,33 @@
-# The following lines were added by compinstall
-
-zstyle ':completion:*' completer _complete _ignored _approximate
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=** r:|=**'
-zstyle ':completion:*' max-errors 2
-zstyle :compinstall filename '/home/nodel/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+setopt extendedglob nomatch notify
+unsetopt autocd beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/styx/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
 
 export EDITOR='nvim'
 export VISUAL='nvim'
 
-alias zshconfig="nvim ~/.zshrc"
+alias config="nvim ~/.zshrc"
 alias vim="nvim"
 alias reload="source ~/.zshrc"
 alias shutdown="shutdown -h now"
-alias open="~/.scripts/open/open"
 alias lit="lazygit"
 alias imopen="loupe"
 alias audio-visualizer="cava"
 alias sync="onedrive --synchronize"
+alias neofetch=fastfetch
+alias ls="ls --color"
 
-export PATH="$HOME/.local/bin:$PATH:/home/nodel/.local/share/coursier/bin:/opt/eww/target/release"
-export HYPRSHOT_DIR="/home/nodel/OneDrive/screenshots/"
+export PATH="$PATH:/home/styx/.local/bin"
 
-eval "$(oh-my-posh init zsh --config ~/dotfiles/.oh-my-posh-themes/theme.json)"
-eval "$(zoxide init --cmd cd zsh)"
-
+eval "$(oh-my-posh init zsh --config ~/.config/.oh-my-posh-themes/theme.json)"
