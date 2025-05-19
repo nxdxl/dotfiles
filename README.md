@@ -1,11 +1,11 @@
-#########################################
-\#  Installation assuming arch on grub  #
-#########################################
+#########################################  
+\#  Installation assuming arch on grub  #  
+#########################################  
 
-First; remove the need for a password:
+First; remove the need for a password:  
 ```sudo visudo```
-and append
-```$USER ALL=(ALL) NOPASSWD: ALL```
+and append  
+```$USER ALL=(ALL) NOPASSWD: ALL```  
 
 Then copy the ssh keys over.
 
