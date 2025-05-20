@@ -22,7 +22,7 @@ sudo mkdir -p /usr/lib/firmware/scarlett2
 sudo pacman -Syyu
 
 # Install all required packages
-sudo pacman -S archlinux-keyring kitty steam nvidia zsh unzip git hyprpaper discord gtk4 stow nvim meson ninja sassc glibc json-glib alsa-lib libpulse gtk4-layer-shell gobject-introspection brightnessctl vala cmake glib2-devel man reaper noto-fonts-emoji godot fcitx5 fcitx5-im fcitx5-configtool fcitx5-moz zoxide krita pipewire pipewire-alsa pipewire-pulse pipewire-jack loupe zathura zathura-pdf-mupdf obsidian
+sudo pacman -S archlinux-keyring kitty steam nvidia zsh unzip git hyprpaper discord gtk4 stow nvim meson ninja sassc glibc json-glib alsa-lib libpulse gtk4-layer-shell gobject-introspection brightnessctl vala cmake glib2-devel man reaper noto-fonts-emoji godot fcitx5 fcitx5-im fcitx5-configtool fcitx5-moz zoxide krita pipewire pipewire-alsa pipewire-pulse pipewire-jack qjackctl loupe zathura zathura-pdf-mupdf obsidian pavucontrol yt-dlp
 
 # Make alias available for audio
 systemctl --user enable --now pipewire pipewire-pulse
