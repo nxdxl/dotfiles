@@ -1,0 +1,87 @@
+#!/bin/bash
+user=$USER
+home_path=/home/$user
+repo_path=$home_path/dev/repos
+scarlett_path=$repo_path/scarlett-audio-interface
+dotfile_path=$home_path/dotfiles
+
+echo "******************************************************************"
+echo "* This script will set the system up for you. You will need to   *"
+echo "* enter y or answer yes a bunch of times. Do you want to proceed?*"
+echo "* Press enter to proceed, or ctrl-c to exit.                     *"
+echo "******************************************************************"
+read
+
+# Start off in the home directory and set up directories
+cd $home_path
+mkdir -p $scarlett_path
+mkdir -p $home_path/downloads
+sudo mkdir -p /usr/lib/firmware/scarlett2
+
+# Update the system
+sudo pacman -Syyu
+
+# Install all required packages
+sudo pacman -S archlinux-keyring kitty steam nvidia zsh unzip git hyprpaper discord gtk4 stow nvim meson ninja sassc glibc json-glib alsa-lib libpulse gtk4-layer-shell gobject-introspection brightnessctl vala cmake glib2-devel man reaper noto-fonts-emoji godot fcitx5 fcitx5-im fcitx5-configtool fcitx5-moz zoxide krita pipewire pipewire-alsa pipewire-pulse pipewire-jack loupe zathura zathura-pdf-mupdf obsidian
+
+# Make alias available for audio
+systemctl --user enable --now pipewire pipewire-pulse
+
+# Setup all the dotfiles
+cd $dotfile_path
+stow .
+
+# Install yay
+cd $repo_path
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+# Install foobar
+yay -S gvc-git
+cd $repo_path
+git clone https://github.com/hannesschulze/foobar.git && cd foobar
+meson setup build --prefix=/usr
+ninja -C build
+sudo ninja install -C build
+
+# Install zen browser
+cd $home_path
+wget https://github.com/zen-browser/desktop/releases/latest/download/zen.linux-x86_64.tar.xz
+tar -xvf zen.linux-x86_64.tar.xz
+sudo mv zen /usr/local/bin/
+sudo rm zen.linux-x86_64.tar.xz
+
+# Install oh-my-posh
+curl -s https://ohmyposh.dev/install.sh | bash -s
+
+# Install Scarlet Audio Driver Support
+
+# Scarlett2 Firmware
+cd $scarlett_path
+git clone https://github.com/geoffreybennett/scarlett2-firmware.git
+sudo cp -r scarlett2-firmware/* /usr/local/firmware/scarlett2/
+
+# Focurite Support Modules
+cd $scarlett_path
+git clone https://github.com/geoffreybennett/fcp-support.git
+cd fcp-support
+make
+sudo make install
+sudo systemctl daemon-reload
+sudo udevadm control --reload-rules
+
+# Scarlett GUI
+cd $scarlett_path
+git clone https://github.com/geoffreybennett/alsa-scarlett-gui
+cd alsa-scarlett-gui/src
+make -j$(nproc)
+sudo make install
+
+# Firmware Management Tool
+cd $scarlett_path
+git clone https://github.com/geoffreybennett/scarlett2.git
+cd scarlett2
+make
+sudo make install

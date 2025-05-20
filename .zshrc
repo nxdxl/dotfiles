@@ -28,6 +28,30 @@ alias sync="onedrive --synchronize"
 alias neofetch=fastfetch
 alias ls="ls --color"
 
+# make pacman usable lol
+pacman() {
+  case "$1" in
+    install)
+      shift
+      sudo pacman -S "$@"
+      ;;
+    remove)
+      shift
+      sudo pacman -R "$@"
+      ;;
+    update)
+      sudo pacman -Sy
+      ;;
+    upgrade)
+      sudo pacman -Syu
+      ;;
+    *)
+      sudo pacman "$@"
+      ;;
+  esac
+}
+
 export PATH="$PATH:/home/styx/.local/bin"
+export PATH="$PATH:/home/styx/.scripts"
 
 eval "$(oh-my-posh init zsh --config ~/.config/.oh-my-posh-themes/theme.json)"
